@@ -5,7 +5,7 @@ import Card from './shared/card'
 function FeedbackCreate({ addFeedback }) {
     const [text, setText] = useState('');
     const [rating, setRating] = useState(2);
-    const message='Feedback Message should be more than four letters '
+    const message = 'Feedback Message should be more than four letters '
 
     const handleText = (e) => {
         e.preventDefault(setText(e.target.value))
@@ -20,11 +20,11 @@ function FeedbackCreate({ addFeedback }) {
                 text,
             }
             addFeedback(newFeedback)
-            
+
         }
         setText('')
 
-        
+
 
     }
 
@@ -41,7 +41,7 @@ function FeedbackCreate({ addFeedback }) {
                         <input onChange={handleText} type="text" placeholder='enter your Feedback message here' value={text} />
                         <button type="submit" >Send Feedback</button>
                     </div>
-                    <h5 style={{color:'red'}}>{text.trim().length<4 ?`${message}`:null}</h5>
+                    <h5 style={{ color: 'red' }}>{text.trim().length < 4 ? `${message}` : null}</h5>
                 </div>
             </form>
         </Card>
