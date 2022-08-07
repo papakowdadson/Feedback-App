@@ -20,7 +20,7 @@ function App() {
 
     return (
         <>
-            <Header text="Feedback UI" />
+            <Header text="Feedback App" />
             <FeedbackCreate addFeedback={addFeedback}/>
             <FeedbackStat feedback={feedback}/>
             <div className="container">

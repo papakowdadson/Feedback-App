@@ -33,12 +33,12 @@ function FeedbackCreate({ addFeedback }) {
             {/* continue with css for create screen */}
             <form onSubmit={handleSubmit}>
                 <div className='FeedbackCreate'>
-                    <div>Create a new feedback from this form</div>
-                    <h5>Rating:</h5>
+                    <h5>Please enter your Feedback and select your rating </h5>
+                    <h6>Rating:</h6>
                     <RatingSelect select={(rating) => setRating(rating)} />
-                    <div >
+                    <div className='FeedbackCreateInline'>
                         <h6>Message:</h6>
-                        <input onChange={handleText} type="text" placeholder='Feedback message' value={text} />
+                        <input onChange={handleText} type="text" placeholder='enter your Feedback message here' value={text} />
                         <button type="submit" >Send Feedback</button>
                     </div>
                     <h5 style={{color:'red'}}>{text.trim().length<4 ?`${message}`:null}</h5>

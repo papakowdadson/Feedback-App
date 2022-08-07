@@ -16,9 +16,9 @@ const Header = ({text,bgColor,textColor}) => {
     );
 }
 Header.defaultProps ={
-    text: 'feedback ui',
-    bgColor: 'grey',
-    textColor:'black',
+    text: 'Feedback App',
+    bgColor: '#050024',
+    textColor:'white',
 }
 Header.propTypes ={
     text:PropTypes.string,
