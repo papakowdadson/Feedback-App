@@ -41,10 +41,15 @@ body {
 
 .close {
     margin-left: auto;
-    cursor: pointer;
+    
+
+}
+
+.close button {
+    margin-left: 5px;
     background: none;
     border: none;
-
+    cursor: pointer;
 }
 
 /* Css for feedbackstat */

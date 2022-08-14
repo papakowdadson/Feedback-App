@@ -6,6 +6,10 @@ function Feedbackprovider({ children }) {
 
     const [feedback, setFeedback] = useState([])
     const [isLoading, setisLoading] = useState(true)
+    const [feedbackEdit, setfeedbackEdit] = useState({
+        item: {},
+        edit: false
+    })
 
     useEffect(() => {
 
@@ -21,6 +25,25 @@ function Feedbackprovider({ children }) {
 
     }
 
+    const editFeedback = (item) => {
+        setfeedbackEdit({ item, edit: true })
+    }
+    const updateFeedback = async(id, upitem) => {
+        
+        const response = await fetch(`http://localhost:5000/feedback/${id}`,{
+            method:'PUT',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify(upitem)
+        })
+        const data=await response.json()
+        setFeedback(feedback.map((item)=>item.id===id?{...item,...data}:{...item}))
+
+        console.log(id)
+        console.log(upitem)
+
+    }
+
+
 
 
     const deleteFeedback = async (id) => {
@@ -32,7 +55,7 @@ function Feedbackprovider({ children }) {
 
         }
     }
-    const addFeedback = async(newFeedback) => {
+    const addFeedback = async (newFeedback) => {
         // await fetch(`http://local:host:5000/feedback`, {
         //     method: 'POST',
         //     headers: { 'Content-Type': 'application/json', },
@@ -44,7 +67,7 @@ function Feedbackprovider({ children }) {
         const response = await fetch(`http://localhost:5000/feedback`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', },
-            body:JSON.stringify(newFeedback),
+            body: JSON.stringify(newFeedback),
         })
         const data = await response.json()
         console.log(data)
@@ -56,7 +79,15 @@ function Feedbackprovider({ children }) {
 
 
     return (
-        <Feedbackcontext.Provider value={{ feedback, deleteFeedback, addFeedback, isLoading }}>
+        <Feedbackcontext.Provider value={{
+            feedback,
+            deleteFeedback,
+            addFeedback,
+            isLoading,
+            editFeedback,
+            feedbackEdit,
+            updateFeedback
+        }}>
             <div>{children}</div>
         </Feedbackcontext.Provider>
     )

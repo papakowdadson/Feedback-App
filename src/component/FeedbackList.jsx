@@ -9,7 +9,7 @@ function FeedbackList() {
 
     if (!isLoading && (!feedback || feedback.length === 0)) {
         return (<div>
-                <h5>no feedback yet</h5>
+                <h5 style={{textAlign:'center'}}>no feedback yet</h5>
 
         </div>)
     }

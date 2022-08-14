@@ -1,34 +1,53 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Feedbackcontext } from './context/FeedbackContext';
 import RatingSelect from './RatingSelect';
 import Card from './shared/card'
 
 function FeedbackCreate() {
-    const {addFeedback}=useContext(Feedbackcontext)
+    const { addFeedback, feedbackEdit,updateFeedback } = useContext(Feedbackcontext)
     const [text, setText] = useState('');
     const [rating, setRating] = useState(2);
     const message = 'Feedback Message should be more than four letters '
+
+    useEffect(() => {
+        if (feedbackEdit.edit===true) {
+            setRating(feedbackEdit.item.rating)
+            setText(feedbackEdit.item.text)
+            console.log('update use effect running')
+        }
+
+    }, [feedbackEdit])
 
     const handleText = (e) => {
         e.preventDefault(setText(e.target.value))
         console.log(text)
 
     }
+
+    
     const handleSubmit = (e) => {
         e.preventDefault()
+        
         if (text.trim().length > 4) {
             const newFeedback = {
                 rating,
                 text,
             }
-            addFeedback(newFeedback)
+            if(feedbackEdit.edit===true){
+                updateFeedback(feedbackEdit.item.id,newFeedback)
+            }
+            else{addFeedback(newFeedback)}
+            
+            setText('')
 
         }
-        setText('')
+        
 
 
 
     }
+    
+    
 
     return (
         <Card >

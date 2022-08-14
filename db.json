@@ -1,39 +1,29 @@
 {
   "feedback": [
     {
-      "id": 1,
       "rating": 10,
-      "text": "data 1 from json server"
+      "text": "qwerty yuor house",
+      "id": 1
     },
     {
-      "id": 2,
+      "rating": 2,
+      "text": "qwertyui",
+      "id": 2
+    },
+    {
       "rating": 3,
-      "text": "data 2 from json server"
+      "text": "qwertyuiop",
+      "id": 3
     },
     {
-      "id": 3,
-      "rating": 5,
-      "text": "data 3 from json server"
-    },
-    {
-      "rating": 9,
-      "text": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "rating": 4,
+      "text": "asdfghj",
       "id": 4
     },
     {
       "rating": 5,
-      "text": "sssssssssssssssssssss",
+      "text": "zxcvbnm",
       "id": 5
-    },
-    {
-      "rating": 2,
-      "text": "data to feedback  json",
-      "id": 6
-    },
-    {
-      "rating": 7,
-      "text": "on God ",
-      "id": 7
     }
   ]
 }
