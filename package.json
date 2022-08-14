@@ -23,7 +23,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "json-server db.json --port 5000",
-    "preinstall": "npx npm-force-resolutions"
+    "preinstall": "npx npm-force-resolutions",
+    "dev":"concurrently \"npm run server\" \"npm start\" "
   },
   "resolutions": {
     "graceful-fs": "^4.2.10"
