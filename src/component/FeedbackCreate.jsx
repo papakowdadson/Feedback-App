@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { Feedbackcontext } from './context/FeedbackContext';
 import RatingSelect from './RatingSelect';
 import Card from './shared/card'
 
-function FeedbackCreate({ addFeedback }) {
+function FeedbackCreate() {
+    const {addFeedback}=useContext(Feedbackcontext)
     const [text, setText] = useState('');
     const [rating, setRating] = useState(2);
     const message = 'Feedback Message should be more than four letters '
