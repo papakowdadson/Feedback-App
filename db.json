@@ -1,21 +1,6 @@
 {
   "feedback": [
     {
-      "rating": 10,
-      "text": "qwerty yuor house",
-      "id": 1
-    },
-    {
-      "rating": 2,
-      "text": "qwertyui",
-      "id": 2
-    },
-    {
-      "rating": 3,
-      "text": "qwertyuiop",
-      "id": 3
-    },
-    {
       "rating": 4,
       "text": "asdfghj",
       "id": 4
@@ -39,11 +24,6 @@
       "rating": 1,
       "text": "In this life of our its either you go home or go hard",
       "id": 8
-    },
-    {
-      "rating": 4,
-      "text": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "id": 9
     }
   ]
 }

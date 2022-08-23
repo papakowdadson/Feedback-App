@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing header 1`] = `
+<header
+  style={
+    Object {
+      "backgroundColor": "blue",
+      "color": "white",
+    }
+  }
+>
+  <div
+    className="container"
+  >
+    <h2
+      className="header-text"
+    >
+      hi there
+    </h2>
+  </div>
+</header>
+`;
+
+exports[`the nav bar  testing header 1`] = `
+<header
+  style={
+    Object {
+      "backgroundColor": "blue",
+      "color": "white",
+    }
+  }
+>
+  <div
+    className="container"
+  >
+    <h2
+      className="header-text"
+    >
+      hi there
+    </h2>
+  </div>
+</header>
+`;

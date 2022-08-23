@@ -4,6 +4,7 @@ import Spinner from "../component/shared/spinner";
 
 it('creates a loading component',()=>{
     reactTestRenderer.create(
+        
        <Spinner></Spinner>
     )
 });

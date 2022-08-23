@@ -14,7 +14,7 @@ function FeedbackItem({ item}) {
                 <button onClick={() => deleteFeedback(item.id)} ><FaTimes color="#0A0143" /></button>
                 </div>
             </div>
-            <div className="text-display">{item.text}</div>
+            <div  className="text-display">{item.text}</div>
 
 
         </Card>

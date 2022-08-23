@@ -25,7 +25,8 @@
     "eject": "react-scripts eject",
     "server": "json-server --watch db.json --port 5000",
     "preinstall": "npx npm-force-resolutions",
-    "dev": "concurrently \"npm run server\" \"npm start\" "
+    "dev": "concurrently \"npm run server\" \"npm start\" ",
+    "coverage": "nyc npm run test"
   },
   "resolutions": {
     "graceful-fs": "^4.2.10"
